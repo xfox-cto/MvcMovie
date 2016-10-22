@@ -17,10 +17,10 @@ namespace MvcMovie.Controllers
             return "This is my default action...";
         }
 
-        // GET: /helloworld/welcome
-        public string Welcome(string name, int numTimes = 1)
+        // GET: /helloworld/welcome/3?name=rick
+        public string Welcome(string name, int id)
         {
-            return HtmlEncoder.Default.Encode( $"Hello {name}, numTimes: {numTimes}");
+            return HtmlEncoder.Default.Encode( $"Hello {name}, ID: {id}");
         }
     }
 }
