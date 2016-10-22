@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,9 +18,9 @@ namespace MvcMovie.Controllers
         }
 
         // GET: /helloworld/welcome
-        public string Welcome()
+        public string Welcome(string name, int numTimes = 1)
         {
-            return "This is Welcom action method...";
+            return HtmlEncoder.Default.Encode( $"Hello {name}, numTimes: {numTimes}");
         }
     }
 }
